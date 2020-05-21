@@ -2,7 +2,6 @@ import React from 'react';
 import './Card.css';
 
 const Card = ({ id, name, date, time, number }) => {
-
   return (
     <article className="card-wrapper">
       <h1>{name}</h1>
