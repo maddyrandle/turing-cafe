@@ -1,0 +1,17 @@
+.card-wrapper {
+  background-color: white;
+  border: 5px solid teal;
+  border-radius: 10px;
+  margin: .5rem;
+  width: 16rem;
+}
+
+.cancelBtn {
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  width: 12rem;
+}
