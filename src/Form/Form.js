@@ -9,7 +9,7 @@ class Form extends Component {
       name: '',
       date: '',
       time: '',
-      number: '',
+      number: ''
     }
   }
 
@@ -20,11 +20,20 @@ class Form extends Component {
   addReservationToAppState = (e) => {
     e.preventDefault();
     this.props.addReservation(this.state);
-    this.clearForm
+    this.clearForm();
+  }
+
+  clearForm = () => {
+    this.setState({
+      id: Date.now(),
+      name: '',
+      date: '',
+      time: '',
+      number: ''
+    })
   }
 
   render() {
-
     return (
       <form>
         <input
