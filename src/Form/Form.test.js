@@ -30,9 +30,6 @@ describe('Form', () => {
     fireEvent.change(numberInput, {target: {value: 3}})
 
     fireEvent.click(getByText('Make Reservation'))
-    expect(mockAddReservation).toHaveBeenCalledWith({
-      
-    });
 
   })
 
