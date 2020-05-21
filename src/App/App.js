@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Form from '../Form/Form';
+import ReservationsContainer from '../ReservationsContainer/ReservationsContainer';
 import './App.css';
 
 class App extends Component {
@@ -17,7 +19,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('data: ', this.state.reservations);
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
