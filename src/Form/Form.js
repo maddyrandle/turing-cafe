@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './Form.css';
 
 class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       name: '',
       date: '',
@@ -13,9 +13,12 @@ class Form extends Component {
   }
 
   updateFormState = (e) => {
-    e.preventDefault();
     this.setState({[e.target.name]: e.target.value})
-    console.log('Form state: ', this.state);
+  }
+
+  addReservationToAppState = (e) => {
+    e.preventDefault();
+    this.props.addReservation(this.state)
   }
 
   render() {
@@ -54,7 +57,7 @@ class Form extends Component {
           onChange={this.updateFormState}
           required
         />
-        <button className="makeResBtn">Make Reservation</button>
+        <button className="makeResBtn" onClick={this.addReservationToAppState}>Make Reservation</button>
       </form>
     )
   }
