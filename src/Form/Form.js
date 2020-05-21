@@ -5,6 +5,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: Date.now(),
       name: '',
       date: '',
       time: '',
@@ -18,7 +19,8 @@ class Form extends Component {
 
   addReservationToAppState = (e) => {
     e.preventDefault();
-    this.props.addReservation(this.state)
+    this.props.addReservation(this.state);
+    this.clearForm
   }
 
   render() {
