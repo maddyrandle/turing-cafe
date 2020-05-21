@@ -12,6 +12,12 @@ class Form extends Component {
     }
   }
 
+  updateFormState = (e) => {
+    e.preventDefault();
+    this.setState({[e.target.name]: e.target.value})
+    console.log('Form state: ', this.state);
+  }
+
   render() {
 
     return (
@@ -21,7 +27,7 @@ class Form extends Component {
           name="name"
           placeholder="Name"
           value={this.state.name}
-          onChange={this.updateFormWithString}
+          onChange={this.updateFormState}
           required
         />
         <input
@@ -29,7 +35,7 @@ class Form extends Component {
           name="date"
           placeholder="Date(mm/dd)"
           value={this.state.date}
-          onChange={this.updateFormWithString}
+          onChange={this.updateFormState}
           required
         />
         <input
@@ -37,15 +43,15 @@ class Form extends Component {
           name="time"
           placeholder="Time"
           value={this.state.time}
-          onChange={this.updateFormWithString}
+          onChange={this.updateFormState}
           required
         />
         <input
-          type="number"
+          type="string"
           name="number"
           placeholder="Number of guests"
           value={this.state.number}
-          onChange={this.updateFormWithNumber}
+          onChange={this.updateFormState}
           required
         />
         <button className="makeResBtn">Make Reservation</button>
